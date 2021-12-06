@@ -15,14 +15,13 @@ class Home extends StatefulWidget {
 }
 
 class _Home extends State<Home> with SingleTickerProviderStateMixin {
-  PMFont myFont;
-  Path myPath1;
-  Path myPath2;
+  late PMFont myFont;
+  late Path myPath1;
 
-  PMPieces path1Pieces;
+  late PMPieces path1Pieces;
 
-  Animation<int> animation;
-  AnimationController controller;
+  late Animation<int> animation;
+  late AnimationController controller;
 
   var z = 0;
   var ready = false;
@@ -75,7 +74,7 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
       body: Container(
           child: Column(children: [
             Row(children: [
-              RaisedButton(
+              ElevatedButton(
                   child: Text("Forward"),
                   onPressed: ready
                       ? () {
@@ -83,7 +82,7 @@ class _Home extends State<Home> with SingleTickerProviderStateMixin {
                         }
                       : null),
               Spacer(),
-              RaisedButton(
+              ElevatedButton(
                   child: Text("Reverse"),
                   onPressed: ready
                       ? () {
